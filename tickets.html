@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tickets</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="d-flex">
+        <nav class="sidebar bg-dark text-white p-3">
+            <h4 class="mb-4">Dashboard Kit</h4>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link text-white" href="index.html">Overview</a></li>
+                <li class="nav-item active"><a class="nav-link text-white" href="tickets.html">Tickets</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Ideas</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Contacts</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Agents</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Articles</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Settings</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Subscription</a></li>
+            </ul>
+        </nav>
+
+        <div class="container-fluid p-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Tickets</h2>
+                <div class="d-flex align-items-center">
+                    <div class="me-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                    </div>
+                    <div class="me-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+                        </svg>
+                    </div>
+                    <div>Jones Ferdinand</div>
+                </div>
+            </div>
+
+            <div class="card p-4">
+                <div class="d-flex justify-content-between mb-4">
+                    <h5>All tickets</h5>
+                    <div>
+                        <button class="btn btn-light me-2">
+                            Sort
+                        </button>
+                        <button class="btn btn-light">
+                            Filter
+                        </button>
+                    </div>
+                </div>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Ticket details</th>
+                            <th>Customer name</th>
+                            <th>Date</th>
+                            <th>Priority</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="user-avatar me-3">User</div>
+                                    <div>
+                                        <div class="fw-bold">Contact Email not Linked</div>
+                                        <small class="text-muted">Updated 1 day ago</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>Tom Cruise</div>
+                                <small class="text-muted">on 24.05.2019</small>
+                            </td>
+                            <td>
+                                <div>May 26, 2019</div>
+                                <small class="text-muted">6:30 PM</small>
+                            </td>
+                            <td>
+                                <span class="badge bg-danger">HIGH</span>
+                            </td>
+                            <td class="text-end">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                </svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="user-avatar me-3">User</div>
+                                    <div>
+                                        <div class="fw-bold">Adding Images to Featured Posts</div>
+                                        <small class="text-muted">Updated 1 day ago</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>Matt Damon</div>
+                                <small class="text-muted">on 24.05.2019</small>
+                            </td>
+                            <td>
+                                <div>May 26, 2019</div>
+                                <small class="text-muted">8:00 AM</small>
+                            </td>
+                            <td>
+                                <span class="badge bg-warning text-dark">LOW</span>
+                            </td>
+                            <td class="text-end">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                </svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="user-avatar me-3">User</div>
+                                    <div>
+                                        <div class="fw-bold">When will I be charged this month?</div>
+                                        <small class="text-muted">Updated 1 day ago</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>Robert Downey</div>
+                                <small class="text-muted">on 24.05.2019</small>
+                            </td>
+                            <td>
+                                <div>May 26, 2019</div>
+                                <small class="text-muted">7:30 PM</small>
+                            </td>
+                            <td>
+                                <span class="badge bg-danger">HIGH</span>
+                            </td>
+                            <td class="text-end">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                </svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="user-avatar me-3">User</div>
+                                    <div>
+                                        <div class="fw-bold">Payment not going through</div>
+                                        <small class="text-muted">Updated 2 days ago</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>Christian Bale</div>
+                                <small class="text-muted">on 24.05.2019</small>
+                            </td>
+                            <td>
+                                <div>May 25, 2019</div>
+                                <small class="text-muted">5:00 PM</small>
+                            </td>
+                            <td>
+                                <span class="badge bg-success">NORMAL</span>
+                            </td>
+                            <td class="text-end">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                </svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="user-avatar me-3">User</div>
+                                    <div>
+                                        <div class="fw-bold">Unable to add replies</div>
+                                        <small class="text-muted">Updated 2 days ago</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>Henry Cavil</div>
+                                <small class="text-muted">on 24.05.2019</small>
+                            </td>
+                            <td>
+                                <div>May 25, 2019</div>
+                                <small class="text-muted">4:00 PM</small>
+                            </td>
+                            <td>
+                                <span class="badge bg-danger">HIGH</span>
+                            </td>
+                            <td class="text-end">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                </svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="user-avatar me-3">User</div>
+                                    <div>
+                                        <div class="fw-bold">Downtime since last week</div>
+                                        <small class="text-muted">Updated 3 days ago</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>Chris Evans</div>
+                                <small class="text-muted">on 23.05.2019</small>
+                            </td>
+                            <td>
+                                <div>May 25, 2019</div>
+                                <small class="text-muted">2:00 PM</small>
+                            </td>
+                            <td>
+                                <span class="badge bg-success">NORMAL</span>
+                            </td>
+                            <td class="text-end">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                </svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="user-avatar me-3">User</div>
+                                    <div>
+                                        <div class="fw-bold">Referral Bonus</div>
+                                        <small class="text-muted">Updated 4 days ago</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>Sam Smith</div>
+                                <small class="text-muted">on 22.05.2019</small>
+                            </td>
+                            <td>
+                                <div>May 25, 2019</div>
+                                <small class="text-muted">11:30 AM</small>
+                            </td>
+                            <td>
+                                <span class="badge bg-warning text-dark">LOW</span>
+                            </td>
+                            <td class="text-end">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                </svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="user-avatar me-3">User</div>
+                                    <div>
+                                        <div class="fw-bold">How do I change my password?</div>
+                                        <small class="text-muted">Updated 6 days ago</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>Steve Rogers</div>
+                                <small class="text-muted">on 21.05.2019</small>
+                            </td>
+                            <td>
+                                <div>May 24, 2019</div>
+                                <small class="text-muted">1:00 PM</small>
+                            </td>
+                            <td>
+                                <span class="badge bg-success">NORMAL</span>
+                            </td>
+                            <td class="text-end">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                </svg>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                    <div>
+                        <span class="me-2">Rows per page:</span>
+                        <select class="form-select form-select-sm d-inline-block" style="width: auto;">
+                            <option selected>8</option>
+                            <option>10</option>
+                            <option>20</option>
+                        </select>
+                    </div>
+                    <div class="text-muted">
+                        1-8 of 1240
+                    </div>
+                    <div>
+                        <button class="btn btn-sm btn-light me-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                            </svg>
+                        </button>
+                        <button class="btn btn-sm btn-light">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

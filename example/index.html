@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard Overview</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="d-flex">
+        <nav class="sidebar bg-dark text-white p-3" style="width: 250px; height: 100vh;">
+            <h4>Dashboard Kit</h4>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link text-white" href="#">Overview</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Tickets</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Ideas</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Contacts</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Agents</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Articles</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Settings</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Subscription</a></li>
+            </ul>
+        </nav>
+
+        <div class="container-fluid p-4">
+            <h2 class="mb-4">Overview</h2>
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <div class="card text-center p-3">
+                        <h5>Unresolved</h5>
+                        <h3>60</h3>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center p-3 border-primary">
+                        <h5 class="text-primary">Overdue</h5>
+                        <h3 class="text-primary">16</h3>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center p-3">
+                        <h5>Open</h5>
+                        <h3>43</h3>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center p-3">
+                        <h5>On Hold</h5>
+                        <h3>64</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-8">
+                    <div class="card p-4">
+                        <h5>Today's Trends</h5>
+                        <canvas id="trendChart"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-4">
+                        <h5>Statistics</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Resolved: <strong>449</strong></li>
+                            <li class="list-group-item">Received: <strong>426</strong></li>
+                            <li class="list-group-item">Avg Response Time: <strong>3h 8m</strong></li>
+                            <li class="list-group-item">Resolution within SLA: <strong>94%</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card p-4">
+                        <h5>Unresolved Tickets</h5>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Issue</th>
+                                    <th>Count</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Feature Request</td>
+                                    <td>4238</td>
+                                </tr>
+                                <tr>
+                                    <td>Customer Response</td>
+                                    <td>1005</td>
+                                </tr>
+                                <tr>
+                                    <td>Developer Fix</td>
+                                    <td>914</td>
+                                </tr>
+                                <tr>
+                                    <td>Pending</td>
+                                    <td>281</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card p-4">
+                        <h5>Tasks</h5>
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Finish ticket update <span class="badge bg-warning">URGENT</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Create new ticket <span class="badge bg-success">NEW</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Update ticket report <span class="badge bg-secondary">DEFAULT</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ctx = document.getElementById('trendChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+                datasets: [{
+                    label: 'Today',
+                    data: [5, 10, 15, 20, 25, 30, 28, 40, 38, 22, 18, 30, 38, 25, 20, 15, 10, 8, 6, 5, 3, 2],
+                    borderColor: 'blue',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+        });
+    </script>
+</body>
+</html>

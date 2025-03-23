@@ -1,0 +1,229 @@
+// Custom variables
+$primary: #3751FF;
+$dark: #363740;
+$light-bg: #F7F8FC;
+$text-muted: #9FA2B4;
+$border-color: #DFE0EB;
+
+// Import Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// General styles
+body {
+  background-color: $light-bg;
+  font-family: 'Mulish', sans-serif;
+  color: #252733;
+}
+
+// Sidebar
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  z-index: 1000;
+  overflow-y: auto;
+  background-color: $dark;
+  
+  .logo-container {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 0;
+  }
+  
+  .nav-item {
+    margin-bottom: 5px;
+    
+    &.active {
+      .nav-link {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: $primary;
+        border-left: 3px solid $primary;
+      }
+    }
+    
+    .nav-link {
+      color: #A4A6B3;
+      padding: 12px 24px;
+      transition: all 0.2s;
+      
+      &:hover {
+        color: white;
+      }
+      
+      i {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+// Main content
+.main-content {
+  margin-left: 255px;
+  min-height: 100vh;
+  
+  header {
+    background-color: white;
+    height: 60px;
+    border-bottom: 1px solid $border-color;
+    
+    .search-icon, .notification-icon {
+      color: $text-muted;
+      font-size: 16px;
+    }
+  }
+}
+
+// Cards
+.card {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  
+  .card-title {
+    font-weight: 600;
+  }
+  
+  &.active-card {
+    border-color: $primary;
+  }
+}
+
+// Chart
+.chart-container {
+  position: relative;
+  margin: auto;
+}
+
+.legend-line {
+  display: inline-block;
+  width: 15px;
+  height: 2px;
+  margin-right: 5px;
+  vertical-align: middle;
+  
+  &.today {
+    background-color: $primary;
+  }
+  
+  &.yesterday {
+    background-color: #DFE0EB;
+  }
+}
+
+// List group
+.list-group-item {
+  border-left: 0;
+  border-right: 0;
+  
+  &:first-child {
+    border-top: 0;
+  }
+  
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+// Tasks
+.form-check-input:checked + .form-check-label {
+  text-decoration: line-through;
+  color: $text-muted;
+}
+
+// Tickets page
+.table {
+  color: #252733;
+  
+  thead {
+    th {
+      color: $text-muted;
+      font-weight: 500;
+      border-bottom: 1px solid $border-color;
+    }
+  }
+  
+  tbody {
+    tr {
+      border-bottom: 1px solid $border-color;
+      
+      &:hover {
+        background-color: rgba(55, 81, 255, 0.02);
+      }
+      
+      td {
+        border: none;
+      }
+    }
+  }
+}
+
+.user-icon {
+  font-size: 0.85rem;
+  color: $text-muted;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.badge {
+  padding: 4px 10px;
+  font-weight: 500;
+  border-radius: 4px;
+  
+  &.bg-danger {
+    background-color: #F12B2C !important;
+  }
+  
+  &.bg-warning {
+    background-color: #FEC400 !important;
+  }
+  
+  &.bg-success {
+    background-color: #29CC97 !important;
+  }
+}
+
+.form-select-sm {
+  border-radius: 4px;
+  border-color: $border-color;
+  color: $text-muted;
+}
+
+// Adjust main content to not overlap sidebar
+.container-fluid {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+  
+  .container-fluid {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    width: 0;
+    display: none;
+  }
+  
+  .main-content {
+    margin-left: 0;
+  }
+} 
